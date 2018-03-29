@@ -1,3 +1,4 @@
 FROM tesseractshadow/tesseract4re
 
-RUN apt-get install -y tesseract-ocr-jpn
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && apt-get install -y tesseract-ocr-jpn
